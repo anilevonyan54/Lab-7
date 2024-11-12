@@ -26,7 +26,7 @@ string rleCompress(const string& text) {
             ++i;
         }
         compressed += text[i];
-        compressed += to_string(count);
+        compressed += (count + '0');
     }
     return compressed;
 }
@@ -47,7 +47,7 @@ int main() {
     int shift;
 
     cout << "Enter text to encrypt: ";
-    getline(std::cin, text);
+    cin >> text;
 
     cout << "Enter Caesar cipher shift: ";
     cin >> shift;
